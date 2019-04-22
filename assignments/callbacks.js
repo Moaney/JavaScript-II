@@ -36,13 +36,16 @@ getLength(items, (lengthOfList) => {
 
 
 
-function last(item, cb) {
+function lastItem(arr, cb) {
   // last passes the last item of the array into the callback.
-  return cb(last.item);
 }
 
-last(items, (lastItem) => {
-  console.log(lastItem);
+function lastItem(arr, cb) {
+ return cb(arr[0]); 
+}
+
+lastItem(items, function(last) {
+  console.log(last);
 });
 
 function sumNums(x, y, cb) {
@@ -70,8 +73,8 @@ function contains(item, list, cb) {
 
 /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
+// function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-}
+// }
